@@ -1,0 +1,1219 @@
+
+:root{
+    --black:#070809;
+    --black-2:#0c0e10;
+    --panel:#101214;
+    --gold:#ffbf1c;
+    --gold-dark:#e7a700;
+    --white:#f4f4f4;
+    --muted:#969aa0;
+    --line:rgba(255,255,255,.11);
+    --green:#22e66d;
+    --max:1240px;
+    --header-h:78px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{
+    scroll-behavior:smooth;
+    background:var(--black);
+}
+
+body{
+    min-width:320px;
+    background:var(--black);
+    color:var(--white);
+    font-family:"Inter",Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+body.menu-open{overflow:hidden}
+
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+
+[hidden]{display:none !important}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:var(--header-h);
+    z-index:3000;
+    background:rgba(5,6,7,.98);
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.navbar{
+    width:100%;
+    height:100%;
+    padding:0 clamp(14px,2.8vw,38px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    height:100%;
+    display:flex;
+    align-items:center;
+    min-width:0;
+}
+
+.brand img{
+    display:block;
+    width:205px;
+    height:auto;
+    max-height:58px;
+    object-fit:contain;
+}
+
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.desktop-auth{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-right:3px;
+}
+
+.nav-btn{
+    height:46px;
+    min-width:94px;
+    padding:0 18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--gold);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:1px;
+    transition:.2s ease;
+}
+
+.nav-login{
+    background:transparent;
+}
+
+.nav-login:hover{
+    background:var(--gold);
+    color:#080909;
+}
+
+.nav-signup{
+    background:var(--gold);
+    color:#080909;
+}
+
+.nav-signup:hover{
+    background:#ffd252;
+}
+
+.profile-trigger{
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    background:transparent;
+    color:var(--gold);
+    place-items:center;
+    cursor:pointer;
+}
+
+.profile-icon{
+    font-size:17px;
+}
+
+.hamburger{
+    width:48px;
+    height:46px;
+    border:0;
+    background:transparent;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:27px;
+    height:3px;
+    border-radius:2px;
+    background:#fff;
+    transition:.25s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+   MENU
+   Navbar = 3000
+   Overlay = 2000
+   Menu = 2500
+   Therefore navbar stays visible when menu opens.
+   ========================================================= */
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.72);
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .25s ease,visibility .25s ease;
+}
+
+.menu-overlay.open{
+    opacity:1;
+    visibility:visible;
+}
+
+.side-menu{
+    position:fixed;
+    top:0;
+    right:0;
+    width:min(430px,88vw);
+    height:100dvh;
+    z-index:2500;
+    padding-top:var(--header-h);
+    overflow-y:auto;
+    background:#090a0c;
+    border-left:1px solid var(--gold);
+    transform:translateX(105%);
+    transition:transform .3s cubic-bezier(.2,.8,.2,1);
+}
+
+.side-menu.open{
+    transform:translateX(0);
+}
+
+.side-menu-inner{
+    padding:25px 36px 40px;
+}
+
+.menu-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:22px;
+}
+
+.menu-avatar{
+    width:48px;
+    height:48px;
+    flex:0 0 48px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:var(--gold);
+}
+
+.menu-profile-copy span,
+.menu-title,
+.section-kicker{
+    font-family:"Barlow Condensed",sans-serif;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.menu-profile-copy span{
+    display:block;
+    color:var(--gold);
+    font-size:11px;
+    margin-bottom:3px;
+}
+
+.menu-profile-copy strong{
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:23px;
+    letter-spacing:1px;
+}
+
+.menu-auth{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.menu-team{
+    margin-bottom:30px;
+}
+
+.menu-btn{
+    min-height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 15px;
+    border:1px solid var(--gold);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.menu-login{
+    background:transparent;
+}
+
+.menu-signup,
+.menu-team-btn{
+    background:var(--gold);
+    color:#080909;
+}
+
+.menu-team-btn span{
+    margin-left:auto;
+    font-size:20px;
+}
+
+.menu-title{
+    color:var(--gold);
+    font-size:16px;
+    padding-bottom:13px;
+    border-bottom:1px solid var(--line);
+}
+
+.menu-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.menu-links a{
+    padding:13px 0;
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:.6px;
+    transition:.2s;
+}
+
+.menu-links a:hover{
+    color:var(--gold);
+    padding-left:5px;
+}
+
+.logout-btn{
+    width:100%;
+    height:43px;
+    margin-top:18px;
+    border:1px solid #682828;
+    background:transparent;
+    color:#ff7c7c;
+    font-weight:900;
+    cursor:pointer;
+}
+
+/* =========================================================
+   SOCIAL RAIL
+   ========================================================= */
+
+.social-rail{
+    position:fixed;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:900;
+    width:58px;
+    background:rgba(7,8,9,.96);
+    border:1px solid rgba(255,255,255,.18);
+    border-right:0;
+    border-radius:18px 0 0 18px;
+    overflow:hidden;
+}
+
+.social-rail a{
+    width:100%;
+    height:58px;
+    display:grid;
+    place-items:center;
+    border-bottom:1px solid var(--line);
+    font-size:20px;
+    font-weight:900;
+    transition:.2s;
+}
+
+.social-rail a:last-child{
+    border-bottom:0;
+}
+
+.social-rail a:hover{
+    color:var(--gold);
+    background:#111315;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    position:relative;
+    min-height:100svh;
+    padding:
+        calc(var(--header-h) + clamp(60px,9vh,110px))
+        clamp(24px,6vw,80px)
+        75px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background:
+        center/cover no-repeat
+        url("../assets/images/hero-bg.jpg");
+    transform:scale(1.015);
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.86) 0%,
+            rgba(0,0,0,.64) 45%,
+            rgba(0,0,0,.40) 100%
+        );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(900px,100%);
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:30px;
+    color:var(--gold);
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:clamp(17px,1.8vw,25px);
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.eyebrow span{
+    width:78px;
+    height:4px;
+    flex:0 0 auto;
+    background:var(--gold);
+}
+
+.hero h1,
+.inner-content h1,
+.form-card h1,
+.detail-copy h1{
+    font-family:"Barlow Condensed",sans-serif;
+    font-weight:900;
+    line-height:.84;
+    letter-spacing:-2px;
+}
+
+.hero h1{
+    font-size:clamp(82px,10vw,175px);
+}
+
+.hero h1 em{
+    color:transparent;
+    font-style:normal;
+    -webkit-text-stroke:2px var(--gold);
+}
+
+.hero p{
+    width:min(780px,100%);
+    margin:35px 0 28px;
+    color:#c5c8cc;
+    font-size:clamp(14px,1.35vw,19px);
+    line-height:1.75;
+}
+
+.hero-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    min-width:245px;
+    gap:38px;
+    padding:16px 22px;
+    background:var(--gold);
+    color:#080909;
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:.8px;
+    transition:.2s ease;
+}
+
+.hero-cta b{
+    font-size:27px;
+    line-height:1;
+}
+
+.hero-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 35px rgba(255,191,28,.18);
+}
+
+.scroll-cue{
+    position:absolute;
+    z-index:2;
+    left:clamp(24px,6vw,80px);
+    bottom:20px;
+    color:#777c82;
+    font-size:9px;
+    letter-spacing:3px;
+}
+
+.scroll-cue span{
+    color:var(--gold);
+    font-size:16px;
+}
+
+/* =========================================================
+   TOURNAMENT SECTION
+   ========================================================= */
+
+.tournament-section{
+    padding:85px clamp(24px,6vw,80px) 90px;
+    background:#101214;
+}
+
+.section-heading{
+    width:min(var(--max),100%);
+    margin:0 auto 30px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.section-kicker{
+    color:var(--gold);
+    font-size:12px;
+}
+
+.section-heading h2{
+    margin-top:7px;
+    font-family:"Barlow Condensed",sans-serif;
+    font-size:50px;
+    line-height:1;
+    font-weight:900;
+}
+
+.section-heading h2 span{
+    color:var(--gold);
+}
+
+.view-all{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:900;
+}
+
+.tournament-carousel{
+    position:relative;
+    width:min(var(--max),100%);
+    margin:auto;
+}
+
+.tournament-track{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+}
+
+.tournament-card{
+    min-width:0;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:9px;
+    background:#080a0b;
+    transition:.25s ease;
+}
+
+.tournament-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,191,28,.55);
+}
+
+.tournament-card img{
+    display:block;
+    width:100%;
+    aspect-ratio:1.42;
+    object-fit:cover;
+}
+
+.tournament-info{
+    padding:15px 16px 20px;
+}
+
+.tournament-info h3{
+    margin-bottom:8px;
+    font-size:14px;
+    line-height:1.3;
+}
+
+.status{
+    display:block;
+    margin-bottom:20px;
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+.tournament-info small{
+    display:block;
+    margin-bottom:5px;
+    color:#7f848a;
+    font-size:11px;
+}
+
+.tournament-info p{
+    font-size:12px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.carousel-btn{
+    display:none;
+    position:absolute;
+    top:43%;
+    z-index:4;
+    width:40px;
+    height:40px;
+    border:0;
+    border-radius:50%;
+    background:#191b1d;
+    color:#fff;
+    font-size:27px;
+    cursor:pointer;
+}
+
+.carousel-btn.prev{left:-19px}
+.carousel-btn.next{right:-19px}
+
+/* =========================================================
+   FOOTER - intentionally matches the compact reference style
+   ========================================================= */
+
+.site-footer{
+    padding:30px clamp(24px,2.4vw,38px) 17px;
+    background:#141516;
+    border-top:1px solid #27292b;
+}
+
+.footer-nav{
+    width:min(var(--max),100%);
+    margin:auto;
+    padding:5px 0 27px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:24px;
+}
+
+.footer-nav a{
+    color:#8f949a;
+    font-size:14px;
+    font-weight:500;
+    white-space:nowrap;
+}
+
+.footer-nav a:hover{
+    color:#fff;
+}
+
+.footer-copyright{
+    width:min(var(--max),100%);
+    margin:auto;
+    padding-top:18px;
+    border-top:1px solid #292b2d;
+    color:#62666b;
+    font-size:12px;
+}
+
+/* =========================================================
+   INNER PAGES
+   ========================================================= */
+
+.inner-page{
+    position:relative;
+    min-height:calc(100svh - var(--header-h));
+    padding:
+        calc(var(--header-h) + 80px)
+        clamp(24px,6vw,80px)
+        80px;
+    display:flex;
+    align-items:center;
+}
+
+.inner-bg{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,#050607 8%,rgba(5,6,7,.73),#050607),
+        url("../assets/images/hero-bg.jpg") center/cover;
+}
+
+.inner-content{
+    position:relative;
+    width:min(900px,100%);
+}
+
+.inner-content h1{
+    margin:20px 0 30px;
+    font-size:clamp(75px,9vw,145px);
+}
+
+.inner-content p{
+    width:min(720px,100%);
+    margin-bottom:30px;
+    color:#afb3b8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.form-page{
+    min-height:calc(100svh - var(--header-h));
+    padding:
+        calc(var(--header-h) + 55px)
+        20px
+        65px;
+    display:grid;
+    place-items:center;
+    background:
+        radial-gradient(circle at 50% 15%,#1b1508,#050607 55%);
+}
+
+.form-card{
+    width:min(550px,100%);
+    padding:40px;
+    border:1px solid var(--line);
+    background:#0b0d0f;
+}
+
+.form-card h1{
+    margin:14px 0;
+    font-size:65px;
+}
+
+.form-card h1 span{
+    color:var(--gold);
+}
+
+.form-card>p{
+    margin-bottom:22px;
+    color:#8e9399;
+    line-height:1.65;
+}
+
+.form-card form{
+    display:grid;
+    gap:16px;
+}
+
+.form-card label{
+    color:#c6c9cd;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.form-card input{
+    width:100%;
+    height:48px;
+    display:block;
+    margin-top:7px;
+    padding:0 14px;
+    outline:none;
+    border:1px solid #2c3033;
+    background:#151719;
+    color:#fff;
+}
+
+.form-card input:focus{
+    border-color:var(--gold);
+}
+
+.form-submit{
+    width:100%;
+    border:0;
+    cursor:pointer;
+}
+
+.form-switch{
+    margin-top:20px !important;
+}
+
+.form-switch a{
+    color:var(--gold);
+    font-weight:800;
+}
+
+/* =========================================================
+   TOURNAMENT DETAILS
+   ========================================================= */
+
+.tournament-detail{
+    min-height:calc(100svh - var(--header-h));
+    padding:
+        calc(var(--header-h) + 65px)
+        clamp(24px,6vw,80px)
+        75px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    align-items:center;
+    gap:60px;
+    background:#070809;
+}
+
+.detail-image img{
+    display:block;
+    width:100%;
+    border:1px solid var(--line);
+}
+
+.detail-copy h1{
+    margin:17px 0;
+    font-size:clamp(68px,7vw,110px);
+}
+
+.detail-date{
+    margin-bottom:24px;
+    color:var(--gold);
+    font-weight:800;
+}
+
+.detail-copy>p:not(.detail-date){
+    margin-bottom:28px;
+    color:#aeb2b7;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width:1100px){
+    :root{--header-h:72px}
+
+    .brand img{
+        width:185px;
+    }
+
+    .hero h1{
+        font-size:clamp(76px,11vw,145px);
+    }
+
+    .tournament-track{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .carousel-btn{
+        display:grid;
+        place-items:center;
+    }
+
+    .footer-nav{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:18px;
+    }
+}
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width:700px){
+
+    :root{--header-h:62px}
+
+    .site-header{
+        height:var(--header-h);
+    }
+
+    .navbar{
+        padding:0 12px;
+    }
+
+    .brand img{
+        width:154px;
+        max-height:48px;
+    }
+
+    .desktop-auth{
+        display:none;
+    }
+
+    .navbar-right{
+        gap:2px;
+    }
+
+    .profile-trigger{
+        width:38px;
+        height:38px;
+    }
+
+    .hamburger{
+        width:40px;
+        height:40px;
+    }
+
+    .hamburger span{
+        width:23px;
+        height:2px;
+    }
+
+    /* MENU */
+    .side-menu{
+        width:min(365px,91vw);
+        padding-top:var(--header-h);
+    }
+
+    .side-menu-inner{
+        padding:20px 20px 35px;
+    }
+
+    .menu-profile{
+        margin-bottom:18px;
+    }
+
+    .menu-auth{
+        gap:7px;
+        margin-bottom:24px;
+    }
+
+    .menu-btn{
+        min-height:42px;
+        font-size:12px;
+    }
+
+    .menu-team{
+        margin-bottom:24px;
+    }
+
+    .menu-links a{
+        padding:10px 0;
+        font-size:21px;
+    }
+
+    .menu-title{
+        padding-bottom:10px;
+        font-size:14px;
+    }
+
+    /* SOCIALS */
+    .social-rail{
+        top:auto;
+        bottom:18px;
+        transform:none;
+        width:44px;
+        border-radius:14px 0 0 14px;
+    }
+
+    .social-rail a{
+        height:43px;
+        font-size:16px;
+    }
+
+    /* HERO */
+    .hero{
+        min-height:100svh;
+        padding:
+            calc(var(--header-h) + 58px)
+            16px
+            55px;
+        align-items:flex-start;
+    }
+
+    .hero-bg{
+        background-position:center;
+    }
+
+    .hero-overlay{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.79),
+                rgba(0,0,0,.53)
+            );
+    }
+
+    .hero-content{
+        padding-top:25px;
+    }
+
+    .eyebrow{
+        max-width:100%;
+        gap:8px;
+        margin-bottom:22px;
+        font-size:11px;
+        letter-spacing:.8px;
+        line-height:1.2;
+    }
+
+    .eyebrow span{
+        width:24px;
+        height:2px;
+    }
+
+    .hero h1{
+        font-size:clamp(63px,18.2vw,92px);
+        letter-spacing:-1px;
+    }
+
+    .hero h1 em{
+        -webkit-text-stroke:1.4px var(--gold);
+    }
+
+    .hero p{
+        width:min(340px,100%);
+        margin:24px 0 19px;
+        font-size:12px;
+        line-height:1.55;
+    }
+
+    .hero-cta{
+        min-width:0;
+        width:max-content;
+        max-width:100%;
+        padding:11px 13px;
+        gap:20px;
+        font-size:13px;
+    }
+
+    .hero-cta b{
+        font-size:18px;
+    }
+
+    .scroll-cue{
+        left:16px;
+        bottom:13px;
+        font-size:7px;
+        letter-spacing:2px;
+    }
+
+    /* TOURNAMENTS */
+    .tournament-section{
+        padding:43px 16px 52px;
+    }
+
+    .section-heading{
+        margin-bottom:17px;
+        align-items:flex-start;
+    }
+
+    .section-kicker{
+        font-size:9px;
+        letter-spacing:1.5px;
+    }
+
+    .section-heading h2{
+        margin-top:6px;
+        font-size:33px;
+    }
+
+    .view-all{
+        display:none;
+    }
+
+    .tournament-track{
+        display:flex;
+        gap:9px;
+        overflow-x:auto;
+        padding:0 0 4px;
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+    }
+
+    .tournament-track::-webkit-scrollbar{
+        display:none;
+    }
+
+    .tournament-card{
+        flex:0 0 calc(100vw - 48px);
+        width:calc(100vw - 48px);
+        scroll-snap-align:start;
+        border-radius:7px;
+    }
+
+    .tournament-card img{
+        aspect-ratio:1.42;
+    }
+
+    .tournament-info{
+        padding:12px 12px 16px;
+    }
+
+    .tournament-info h3{
+        font-size:12px;
+    }
+
+    .status{
+        margin-bottom:15px;
+        font-size:10px;
+    }
+
+    .tournament-info small{
+        font-size:9px;
+    }
+
+    .tournament-info p{
+        font-size:10px;
+    }
+
+    /* FOOTER */
+    .site-footer{
+        padding:25px 20px 14px;
+    }
+
+    .footer-nav{
+        grid-template-columns:1fr 1fr;
+        gap:15px 18px;
+        padding-bottom:22px;
+    }
+
+    .footer-nav a{
+        font-size:10px;
+        white-space:normal;
+        line-height:1.3;
+    }
+
+    .footer-copyright{
+        padding-top:15px;
+        font-size:8.5px;
+        line-height:1.5;
+    }
+
+    /* INNER */
+    .inner-page{
+        min-height:calc(100svh - var(--header-h));
+        padding:
+            calc(var(--header-h) + 60px)
+            16px
+            55px;
+    }
+
+    .inner-content h1{
+        margin:15px 0 23px;
+        font-size:clamp(64px,18vw,94px);
+    }
+
+    .inner-content p{
+        margin-bottom:25px;
+        font-size:13px;
+        line-height:1.65;
+    }
+
+    /* FORM */
+    .form-page{
+        min-height:calc(100svh - var(--header-h));
+        padding:
+            calc(var(--header-h) + 35px)
+            16px
+            50px;
+    }
+
+    .form-card{
+        padding:25px 18px;
+    }
+
+    .form-card h1{
+        font-size:50px;
+    }
+
+    .form-card input{
+        height:45px;
+    }
+
+    /* TOURNAMENT DETAIL */
+    .tournament-detail{
+        min-height:calc(100svh - var(--header-h));
+        grid-template-columns:1fr;
+        gap:27px;
+        padding:
+            calc(var(--header-h) + 35px)
+            16px
+            55px;
+    }
+
+    .detail-copy h1{
+        font-size:clamp(58px,16vw,76px);
+    }
+
+    .detail-copy>p:not(.detail-date){
+        font-size:14px;
+        line-height:1.7;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width:380px){
+
+    .brand img{
+        width:140px;
+    }
+
+    .hamburger{
+        width:37px;
+    }
+
+    .hero{
+        padding-left:14px;
+        padding-right:14px;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero p{
+        width:min(285px,100%);
+    }
+
+    .tournament-card{
+        flex-basis:calc(100vw - 40px);
+        width:calc(100vw - 40px);
+    }
+
+    .footer-nav{
+        gap:13px 15px;
+    }
+}

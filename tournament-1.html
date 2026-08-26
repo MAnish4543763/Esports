@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Manifest Esports — tournaments, teams and competitive gaming.">
+    <title>Rising Star Invitational 2026 | Manifest Esports</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+    <div class="navbar">
+        <a class="brand" href="index.html" aria-label="Manifest Esports Home">
+            <img src="assets/images/manifest-logo.png" alt="Manifest Esports">
+        </a>
+
+        <div class="navbar-right">
+            <!-- Desktop guest buttons -->
+            <div class="desktop-auth" id="desktopAuth">
+                <a class="nav-btn nav-login" href="login.html">LOGIN</a>
+                <a class="nav-btn nav-signup" href="signup.html">SIGN UP</a>
+            </div>
+
+            <!-- Appears only after login -->
+            <button class="profile-trigger" id="profileTrigger"
+                    aria-label="Open profile menu" aria-expanded="false">
+                <span class="profile-icon">●</span>
+            </button>
+
+            <!-- Always visible -->
+            <button class="hamburger" id="menuToggle"
+                    aria-label="Open navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- The overlay is BELOW the navbar but ABOVE page content -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Side menu is BELOW the navbar, so the navbar never gets hidden -->
+<aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="side-menu-inner">
+
+        <div class="menu-profile">
+            <div class="menu-avatar">●</div>
+            <div class="menu-profile-copy">
+                <span>PROFILE</span>
+                <strong id="menuUserName">GUEST</strong>
+            </div>
+        </div>
+
+        <!-- Guest: shown before login -->
+        <div class="menu-auth" id="menuAuth">
+            <a class="menu-btn menu-login" href="login.html">LOGIN</a>
+            <a class="menu-btn menu-signup" href="signup.html">SIGN UP</a>
+        </div>
+
+        <!-- Logged-in: hidden until authentication -->
+        <div class="menu-team" id="menuTeam" hidden>
+            <a class="menu-btn menu-team-btn" href="team-details.html">
+                TEAM DETAILS <span>→</span>
+            </a>
+        </div>
+
+        <div class="menu-title">MENU</div>
+
+        <nav class="menu-links">
+            <a href="index.html">HOME</a>
+            <a href="tournaments.html">TOURNAMENTS</a>
+            <a href="teams.html">TEAMS</a>
+            <a href="leaderboard.html">LEADERBOARD</a>
+            <a href="esports-connect.html">ESPORTS CONNECT</a>
+            <a href="news.html">NEWS</a>
+            <a href="about.html">ABOUT US</a>
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn" hidden>LOG OUT</button>
+    </div>
+</aside>
+
+<main class="tournament-detail">
+    <div class="detail-image">
+        <img src="assets/images/tournament-1.jpg" alt="Rising Star Invitational 2026">
+    </div>
+
+    <section class="detail-copy">
+        <span class="section-kicker">INVITE</span>
+        <h1>Rising Star Invitational 2026</h1>
+        <p class="detail-date">3rd July 2026 to 5th July 2026</p>
+        <p>
+            Experience professionally operated competition with structured
+            stages, competitive integrity and a community-first esports
+            environment.
+        </p>
+        <a class="hero-cta" href="work-with-us.html">
+            <span>GET INVOLVED</span><b>→</b>
+        </a>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+    <div class="footer-nav">
+        <a href="about.html">ABOUT US</a>
+        <a href="esports-connect.html">SUPPORT</a>
+        <a href="#">TERMS OF SERVICE</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">RULEBOOK</a>
+        <a href="#">VENDOR PORTAL</a>
+    </div>
+    <div class="footer-copyright">
+        ©2026 MANIFEST ESPORTS. All rights reserved.
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
