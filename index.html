@@ -1,211 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Manifest Esports — tournaments, teams and competitive gaming.">
-    <title>Manifest Esports</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Manifest Esports — tournaments, teams, rankings and the competitive gaming community.">
+  <title>Manifest Esports — Play. Compete. Grow.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<header class="site-header" id="siteHeader">
-    <div class="navbar">
-        <a class="brand" href="index.html" aria-label="Manifest Esports Home">
-            <img src="assets/images/manifest-logo.png" alt="Manifest Esports">
-        </a>
-
-        
-        <div class="navbar-right">
-            <!-- Desktop guest buttons -->
-            <div class="desktop-auth" id="desktopAuth">
-                <a class="nav-btn nav-login" href="login.html">LOGIN</a>
-                <a class="nav-btn nav-signup" href="signup.html">SIGN UP</a>
-            </div>
-
-            
-            <!-- Appears only after login -->
-            <button class="profile-trigger" id="profileTrigger"
-                    aria-label="Open profile menu" aria-expanded="false">
-                <span class="profile-icon">●</span>
-            </button>
-
-            
-            <!-- Always visible -->
-            <button class="hamburger" id="menuToggle"
-                    aria-label="Open navigation menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+<body class="home-page">
+<header class="site-header home-header" id="siteHeader">
+  <div class="navbar home-navbar">
+    <a class="brand" href="index.html" aria-label="Manifest Esports Home"><img src="assets/images/manifest-logo.png" alt="Manifest Esports"></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="teams.html">Teams</a>
+      <a href="work-with-us.html">Partners</a>
+      <a href="esports-connect.html">Esports Connect</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="home-header-actions">
+      <button class="header-icon search-toggle" aria-label="Search" type="button">⌕</button>
+      <button class="header-icon notification-toggle" aria-label="Notifications" type="button">♧</button>
+      <div class="desktop-auth" id="desktopAuth"><a class="nav-btn nav-login" href="login.html">Login</a><a class="nav-btn nav-signup" href="signup.html">Sign Up</a></div>
+      <button class="profile-trigger" id="profileTrigger" aria-label="Open profile menu" aria-expanded="false"><span class="profile-icon">●</span></button>
+      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
+  </div>
 </header>
 
-    
-<!-- The overlay is BELOW the navbar but ABOVE page content -->
 <div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- Side menu is BELOW the navbar, so the navbar never gets hidden -->
 <aside class="side-menu" id="sideMenu" aria-hidden="true">
-    <div class="side-menu-inner">
+  <div class="side-menu-inner">
+    <div class="menu-profile"><div class="menu-avatar">●</div><div class="menu-profile-copy"><span>PROFILE</span><strong id="menuUserName">GUEST</strong></div></div>
+    <div class="menu-auth" id="menuAuth"><a class="menu-btn menu-login" href="login.html">LOGIN</a><a class="menu-btn menu-signup" href="signup.html">SIGN UP</a></div>
+    <div class="menu-team" id="menuTeam" hidden><a class="menu-btn menu-team-btn" href="team-details.html">TEAM DETAILS <span>→</span></a></div>
+    <div class="menu-title">MENU</div>
+    <nav class="menu-links"><a href="index.html">HOME</a><a href="tournaments.html">TOURNAMENTS</a><a href="leaderboard.html">LEADERBOARD</a><a href="teams.html">TEAMS</a><a href="work-with-us.html">PARTNERS / WORK WITH US</a><a href="esports-connect.html">ESPORTS CONNECT</a><a href="about.html">ABOUT US</a></nav>
+    <button class="logout-btn" id="logoutBtn" hidden>LOG OUT</button>
+  </div>
+</aside>
 
-        <div class="menu-profile">
-            <div class="menu-avatar">●</div>
-            <div class="menu-profile-copy">
-                <span>PROFILE</span>
-                <strong id="menuUserName">GUEST</strong>
+<main class="dashboard-shell">
+  <section class="home-hero" aria-label="Manifest Esports introduction">
+    <div class="home-hero-image" aria-hidden="true"></div>
+    <div class="home-hero-shade" aria-hidden="true"></div>
+    <div class="hero-brand-stamp" aria-hidden="true"><img src="assets/images/manifest-logo.png" alt=""><span>PLAY</span><span>COMPETE</span><span>GROW</span></div>
+    <div class="home-hero-copy">
+      <div class="home-eyebrow"><i></i> ESPORTS MANAGEMENT &amp; TOURNAMENT PLATFORM</div>
+      <h1>WE BUILD<br><em>LEGACIES.</em></h1>
+      <p>Manifest Esports is a next-gen platform for players, teams and organizers. We manage tournaments, build communities and create opportunities in the esports ecosystem.</p>
+      <div class="hero-actions"><a class="primary-action" href="tournaments.html">Explore Tournaments <b>→</b></a><a class="secondary-action" href="about.html">Learn More</a></div>
+    </div>
+    <div class="hero-pagination"><span class="active"></span><span></span><span></span><b>01 / 03</b></div>
+  </section>
+
+  <div class="dashboard-content">
+    <div class="dashboard-main-column">
+      <section class="feature-section" id="tournaments">
+        <div class="section-title-row"><div><span class="section-label"><i></i> FEATURED TOURNAMENT</span><h2>Featured Tournament</h2></div><a class="small-link" href="tournaments.html">View All Tournaments <b>→</b></a></div>
+        <article class="featured-event">
+          <a class="featured-art" href="tournament-2.html" aria-label="View BMPS 2026 tournament"><img src="assets/images/tournament-2.jpg" alt="BMPS 2026 Battlegrounds Mobile India tournament"></a>
+          <div class="featured-event-info">
+            <span class="live-pill"><i></i> FEATURED</span>
+            <h3>BMPS 2026</h3>
+            <div class="event-meta">
+              <div><span class="meta-icon">♜</span><span><small>Prize Pool</small><strong>₹ 50,00,000</strong></span></div>
+              <div><span class="meta-icon">◷</span><span><small>Start Date</small><strong>08 Jun 2026</strong></span></div>
+              <div><span class="meta-icon">▦</span><span><small>End Date</small><strong>21 Jun 2026</strong></span></div>
             </div>
-        </div>
+            <div class="event-bottom"><span class="event-ended">Event concluded · June 2026</span><a class="primary-action compact-action" href="tournament-2.html">View Details <b>→</b></a></div>
+          </div>
+        </article>
 
-        <!-- Guest: shown before login -->
-        <div class="menu-auth" id="menuAuth">
-            <a class="menu-btn menu-login" href="login.html">LOGIN</a>
-            <a class="menu-btn menu-signup" href="signup.html">SIGN UP</a>
-        </div>
-
-        <!-- Logged-in: hidden until authentication -->
-        <div class="menu-team" id="menuTeam" hidden>
-            <a class="menu-btn menu-team-btn" href="team-details.html">
-                TEAM DETAILS <span>→</span>
-            </a>
-        </div>
-
-        <div class="menu-title">MENU</div>
-
-        <nav class="menu-links">
-            <a href="index.html">HOME</a>
-            <a href="tournaments.html">TOURNAMENTS</a>
-            <a href="leaderboard.html">LEADERBOARD</a>
-            <a href="work-with-us.html">PARTNERS / WORK WITH US</a>
-            <a href="esports-connect.html">ESPORTS CONNECT</a>
+        <nav class="quick-links" aria-label="Explore Manifest">
+          <a class="quick-link" href="tournaments.html"><span class="quick-icon">♜</span><strong>Tournaments</strong><small>Compete in top-tier events<br>and win exciting rewards.</small></a>
+          <a class="quick-link" href="leaderboard.html"><span class="quick-icon">♟</span><strong>Leaderboard</strong><small>Track your rank and<br>performance.</small></a>
+          <a class="quick-link" href="teams.html"><span class="quick-icon">♧</span><strong>Teams</strong><small>Find or build your<br>dream team.</small></a>
+          <a class="quick-link" href="esports-connect.html"><span class="quick-icon">◎</span><strong>Esports Connect</strong><small>Connect, collaborate<br>and grow.</small></a>
+          <a class="quick-link" href="work-with-us.html"><span class="quick-icon">✥</span><strong>Partners</strong><small>Trusted brands powering<br>the esports ecosystem.</small></a>
         </nav>
 
-        <button class="logout-btn" id="logoutBtn" hidden>LOG OUT</button>
+        <section class="games-section">
+          <div class="section-title-row"><div><span class="section-label"><i></i> POPULAR GAMES</span><h2>Join Your Favorite Games</h2></div><a class="small-link" href="tournaments.html">View All Games <b>→</b></a></div>
+          <div class="game-grid">
+            <a class="game-card game-bg-one" href="tournaments.html"><img src="assets/images/tournament-2.jpg" alt=""><span>BGMI</span></a>
+            <a class="game-card game-bg-two" href="tournaments.html"><img src="assets/images/hero-bg.jpg" alt=""><span>Valorant</span></a>
+            <a class="game-card game-bg-three" href="tournaments.html"><img src="assets/images/tournament-3.jpg" alt=""><span>Free Fire</span></a>
+            <a class="game-card game-bg-four" href="tournaments.html"><img src="assets/images/tournament-4.jpg" alt=""><span>Call of Duty Mobile</span></a>
+            <a class="game-card game-bg-five" href="tournaments.html"><img src="assets/images/tournament-1.jpg" alt=""><span>CS2</span></a>
+            <a class="game-card game-bg-six" href="tournaments.html"><img src="assets/images/hero-bg.jpg" alt=""><span>Apex Legends</span></a>
+          </div>
+        </section>
+
+        <section class="partners-section">
+          <div class="section-title-row"><div><span class="section-label"><i></i> OUR PARTNERS</span><h2>Trusted by the Best</h2></div></div>
+          <p>We work with industry-leading brands to create better opportunities for players, teams and the esports community.</p>
+          <div class="partner-logos" aria-label="Partner brands"><span class="partner-bgmi">BGMI</span><span class="partner-redbull">Red Bull</span><span>logitech <b>G</b></span><span class="partner-monster">MONSTER<br>ENERGY</span><span>AMD</span><span class="partner-zowie">ZOWIE</span><span class="partner-steel">steelseries</span></div>
+        </section>
+      </section>
     </div>
-</aside>
 
-<main>
-    <section class="hero">
-        <div class="banner hero-bg" aria-hidden="true"></div>
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="eyebrow">
-                <span></span>
-                WE DON'T JUST MANAGE TOURNAMENTS.
-            </div>
+    <aside class="dashboard-sidebar">
+      <section class="side-panel leaderboard-panel">
+        <div class="panel-heading"><h3><span class="panel-symbol">♛</span> Top Players</h3><a href="leaderboard.html">View Full Leaderboard →</a></div>
+        <ol class="player-list">
+          <li><span class="rank">1</span><span class="player-avatar avatar-gold">♛</span><span class="player-name">GodL Esports</span><strong>2840</strong></li>
+          <li><span class="rank">2</span><span class="player-avatar avatar-blue">♜</span><span class="player-name">Team Soul</span><strong>2610</strong></li>
+          <li><span class="rank">3</span><span class="player-avatar avatar-white">✥</span><span class="player-name">Xerox Esports</span><strong>2430</strong></li>
+          <li><span class="rank">4</span><span class="player-avatar avatar-red">◈</span><span class="player-name">OR Esports</span><strong>2210</strong></li>
+          <li><span class="rank">5</span><span class="player-avatar avatar-gold">♛</span><span class="player-name">GE</span><strong>1980</strong></li>
+        </ol>
+      </section>
 
-            <h1>
-                WE BUILD<br>
-                <em>LEGACIES.</em>
-            </h1>
+      <section class="side-panel news-panel">
+        <div class="panel-heading"><h3><span class="panel-symbol">▰</span> Latest News</h3><a href="about.html">View All →</a></div>
+        <a class="news-item" href="tournament-2.html"><img src="assets/images/tournament-1.jpg" alt=""><span><strong>BMPS 2026 Registration Now Open!</strong><small>Jun 2, 2026</small></span></a>
+        <a class="news-item" href="work-with-us.html"><img src="assets/images/tournament-3.jpg" alt=""><span><strong>New Partnership with Red Bull</strong><small>May 28, 2026</small></span></a>
+        <a class="news-item" href="esports-connect.html"><img src="assets/images/tournament-4.jpg" alt=""><span><strong>Manifest Esports Community Event</strong><small>May 20, 2026</small></span></a>
+      </section>
 
-            <p>
-                Manifest Esports is an esports management and tournament
-                operations team focused on building competitive experiences
-                that connect players, teams, brands and communities.
-            </p>
-
-            <a class="hero-cta" href="work-with-us.html">
-                <span>WORK WITH US</span>
-                <b>→</b>
-            </a>
-        </div>
-    </section>
-
-    
-<aside class="social-rail" aria-label="Social media">
-    <a href="https://www.instagram.com/manifestesports.in" target="_blank" rel="noopener" aria-label="Instagram"> <img src="assets/images/instagram.jpg" alt="" style="width: 1em; height: 1em; vertical-align: middle; display: inline-block;"> </a>
-    <a href="https://discord.gg/cngJnBwGNE" target="_blank" rel="noopener" aria-label="Discord"> <img src="assets/images/discord.jpg" alt="" style="width: 1em; height: 1em; vertical-align: middle; display: inline-block;"> </a>
-    <a href="https://youtube.com/@manifestesports-17" target="_blank" rel="noopener" aria-label="YouTube"> <img src="assets/images/youtube.jpg" alt="" style="width: 1em; height: 1em; vertical-align: middle; display: inline-block;"> </a>
-    <a href="https://kick.com/manifestesports" target="_blank" rel="noopener" aria-label="Kick"> <img src="assets/images/kick.jpg" alt="" style="width: 1em; height: 1em; vertical-align: middle; display: inline-block;"> </a>
-    <a href="https://wa.me/6397267662" target="_blank" rel="noopener" aria-label="WhatsApp"> <img src="assets/images/whatsup.jpg" alt="" style="width: 1em; height: 1em; vertical-align: middle; display: inline-block;"> </a>
-</aside>
-
-
-    <section class="tournament-section" id="tournaments">
-        <div class="section-heading">
-            <div>
-                <h2><span>TOURNAMENTS</span></h2>
-            </div>
-            <a class="view-all" href="tournaments.html">VIEW ALL →</a>
-        </div>
-
-        <div class="tournament-carousel">
-            <button class="carousel-btn prev" id="prevTournament" aria-label="Previous">‹</button>
-
-            <div class="tournament-track" id="tournamentTrack">
-
-                <article class="tournament-card">
-                    <a href="tournament-1.html">
-                        <img src="assets/images/tournament-1.jpg" alt="Rising Star Invitational">
-                    </a>
-                    <div class="tournament-info">
-                        <h3>Rising Star Invitational 2026</h3>
-                        <span class="status">Invite</span>
-                        <small>Dates</small>
-                        <p>Event concluded · July 2026</p>
-                    </div>
-                </article>
-
-                <article class="tournament-card">
-                    <a href="tournament-2.html">
-                        <img src="assets/images/tournament-2.jpg" alt="BMPS 2026">
-                    </a>
-                    <div class="tournament-info">
-                        <h3>BMPS 2026</h3>
-                        <span class="status">Invite Only</span>
-                        <small>Dates</small>
-                        <p>Event concluded · June 2026</p>
-                    </div>
-                </article>
-
-                <article class="tournament-card">
-                    <a href="tournament-3.html">
-                        <img src="assets/images/tournament-3.jpg" alt="KIE CCT 2026">
-                    </a>
-                    <div class="tournament-info">
-                        <h3>KIE CCT 2026</h3>
-                        <span class="status">Open</span>
-                        <small>Dates</small>
-                        <p>Event concluded · April 2026</p>
-                    </div>
-                </article>
-
-                <article class="tournament-card">
-                    <a href="tournament-4.html">
-                        <img src="assets/images/tournament-4.jpg" alt="UE RS 2026">
-                    </a>
-                    <div class="tournament-info">
-                        <h3>UE | RS 2026</h3>
-                        <span class="status">Open</span>
-                        <small>Dates</small>
-                        <p>Event concluded · March 2026</p>
-                    </div>
-                </article>
-
-            </div>
-
-            <button class="carousel-btn next" id="nextTournament" aria-label="Next">›</button>
-        </div>
-    </section>
+      <a class="partner-cta" href="work-with-us.html"><span class="section-label"><i></i> PARTNER WITH US</span><strong>Become a Partner</strong><small>Let's build something great together. Partner with Manifest Esports and reach a global audience.</small><span class="primary-action compact-action">Partner With Us <b>→</b></span><img src="assets/images/hero-bg.jpg" alt=""></a>
+    </aside>
+  </div>
 </main>
 
-
-<footer class="site-footer">
-    <div class="footer-nav">
-        <a href="about.html">ABOUT US</a>
-        <a href="esports-connect.html">SUPPORT</a>
-        <a href="#">TERMS OF SERVICE</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">RULEBOOK</a>
-        <a href="#">VENDOR PORTAL</a>
-    </div>
-    <div class="footer-copyright">
-        ©2026 MANIFEST ESPORTS. All rights reserved.
-    </div>
+<footer class="home-footer">
+  <a class="footer-brand" href="index.html"><img src="assets/images/manifest-logo.png" alt="Manifest Esports"></a>
+  <nav><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="leaderboard.html">Leaderboard</a><a href="teams.html">Teams</a><a href="work-with-us.html">Partners</a><a href="esports-connect.html">Esports Connect</a><a href="about.html">About Us</a></nav>
+  <div class="footer-socials"><a href="https://discord.gg/cngJnBwGNE" aria-label="Discord">◉</a><a href="https://youtube.com/@manifestesports-17" aria-label="YouTube">▶</a><a href="https://www.instagram.com/manifestesports.in" aria-label="Instagram">◎</a></div>
+  <small>© 2026 Manifest Esports. All rights reserved. <a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a></small>
 </footer>
-
+<nav class="mobile-bottom-nav" aria-label="Mobile navigation"><a class="active" href="index.html"><b>⌂</b><span>Home</span></a><a href="tournaments.html"><b>♜</b><span>Tournaments</span></a><a href="leaderboard.html"><b>♧</b><span>Leaderboard</span></a><a href="teams.html"><b>♟</b><span>Teams</span></a><button type="button" id="mobileMore" aria-label="Open menu"><b>☰</b><span>More</span></button></nav>
 <script src="js/main.js"></script>
+<script>
+document.getElementById('mobileMore')?.addEventListener('click', () => document.getElementById('menuToggle')?.click());
+document.querySelector('.search-toggle')?.addEventListener('click', () => { window.location.href = 'tournaments.html'; });
+document.querySelector('.notification-toggle')?.addEventListener('click', () => { window.location.href = 'esports-connect.html'; });
+</script>
 </body>
 </html>
