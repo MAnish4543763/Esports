@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080b12"/><stop offset=".55" stop-color="#151b26"/><stop offset="1" stop-color="#05070b"/></linearGradient>
+  <linearGradient id="glow" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#ffb21c" stop-opacity=".08"/><stop offset=".55" stop-color="#ff4b2b" stop-opacity=".7"/><stop offset="1" stop-color="#ffb21c" stop-opacity=".12"/></linearGradient>
+  <radialGradient id="orb"><stop stop-color="#ff4b2b" stop-opacity=".45"/><stop offset="1" stop-color="#ff4b2b" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#fff" stroke-opacity=".055" stroke-width="1"/></pattern>
+  <filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+ </defs>
+ <rect width="1200" height="700" fill="url(#bg)"/><rect width="1200" height="700" fill="url(#grid)"/>
+ <circle cx="880" cy="335" r="260" fill="url(#orb)" filter="url(#blur)"/>
+ <path d="M690 -40 L1180 -40 L820 740 L590 740 Z" fill="url(#glow)" opacity=".7"/>
+ <path d="M820 -30 L930 -30 L620 730 L510 730 Z" fill="#ff4b2b" opacity=".13"/>
+ <g fill="none" stroke="#ff4b2b" stroke-opacity=".65"><circle cx="900" cy="330" r="205" stroke-width="2"/><circle cx="900" cy="330" r="175" stroke-width="1" stroke-dasharray="7 12"/><path d="M900 90V570M660 330H1140" stroke-opacity=".3"/><path d="M700 135L1100 535M1100 135L700 535" stroke-opacity=".25"/></g>
+ <g transform="translate(900 330)" fill="none" stroke="#ff4b2b" stroke-width="4" stroke-linejoin="round" opacity=".92"><path d="M0 -112L82 -66L82 34L0 82L-82 34L-82 -66Z"/><path d="M0 -75L50 -47L50 17L0 46L-50 17L-50 -47Z"/><path d="M-22 -25L0 -42L22 -25L22 12L0 28L-22 12Z" fill="#ff4b2b" fill-opacity=".22"/></g>
+ <g fill="#f7f8fb" font-family="Arial,Helvetica,sans-serif" font-weight="900">
+  <text x="72" y="88" font-size="22" letter-spacing="8">MANIFEST <tspan fill="#ff4b2b">ESPORTS</tspan></text>
+  <text x="72" y="150" font-size="13" letter-spacing="5" fill="#ff4b2b">BOOYAH SERIES</text>
+  <text x="66" y="328" font-size="74" letter-spacing="-2">FREE FIRE</text>
+  <text x="70" y="410" font-size="76" letter-spacing="-2" fill="#ff4b2b">INDIA CUP</text>
+  <text x="74" y="475" font-size="16" letter-spacing="4" fill="#b9c1cf">COMPETE  /  CLIMB  /  CONQUER</text>
+ </g>
+ <path d="M72 510H475" stroke="#ff4b2b" stroke-width="3"/>
+ <g font-family="Arial,Helvetica,sans-serif"><text x="72" y="552" fill="#d5dbe5" font-size="15" letter-spacing="3">TOURNAMENT SERIES</text><text x="72" y="598" fill="#fff" font-size="24" font-weight="700">YOUR NEXT MATCH STARTS HERE</text>
+ <text x="1125" y="625" fill="#ff4b2b" font-size="80" font-weight="900" text-anchor="end">02</text><text x="1125" y="658" fill="#aeb7c6" font-size="12" letter-spacing="4" text-anchor="end">OFFICIAL EVENT ARTWORK</text></g>
+ <path d="M0 676H1200" stroke="#ff4b2b" stroke-width="5"/><path d="M0 686H1200" stroke="#fff" stroke-opacity=".12" stroke-width="1"/>
+ </svg>
