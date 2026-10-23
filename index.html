@@ -1,232 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="icon" type="image/png" href="assets/images/manifest-logo.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Manifest Esports — Play. Compete. Grow.">
-<meta property="og:description" content="Manifest Esports — tournaments, teams, rankings and the competitive gaming community.">
-<meta property="og:image" content="https://manish4543763.github.io/Esports/assets/images/manifest-logo.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Manifest Esports — Play. Compete. Grow.">
-<meta name="twitter:description" content="Manifest Esports — tournaments, teams, rankings and the competitive gaming community.">
-<meta name="twitter:image" content="https://manish4543763.github.io/Esports/assets/images/manifest-logo.png">
-
-  <meta name="theme-color" content="#07080c">
-  <meta name="description" content="Manifest Esports — tournaments, teams, rankings and the competitive gaming community.">
-  <title>Manifest Esports — Play. Compete. Grow.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08090b">
+<meta name="description" content="Manifest Esports — tournaments, teams, news and highlights from India’s competitive gaming community."><meta property="og:title" content="Manifest Esports"><meta property="og:description" content="Play. Compete. Grow. Your next chapter starts here."><meta property="og:type" content="website"><title>Manifest Esports | Play. Compete. Grow.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
 </head>
-<body class="home-page">
-<header class="site-header home-header" id="siteHeader">
-  <div class="navbar home-navbar">
-    <a class="brand" href="index.html" aria-label="Manifest Esports Home"><img src="assets/images/manifest-logo.png" alt="Manifest Esports"></a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="tournaments.html">Tournaments</a>
-      <a href="leaderboard.html">Leaderboard</a>
-      <a href="teams.html">Teams</a>
-      <a href="work-with-us.html">Partners</a>
-      <a href="esports-connect.html">Esports Connect</a>
-      <a href="about.html">About Us</a>
-    </nav>
-    <div class="home-header-actions">
-      <button class="header-icon search-toggle" aria-label="Search" type="button">⌕</button>
-      <button class="header-icon notification-toggle" aria-label="Notifications" type="button">♧</button>
-      <div class="desktop-auth" id="desktopAuth"><a class="nav-btn nav-login" href="login.html">Login</a><a class="nav-btn nav-signup" href="signup.html">Sign Up</a></div>
-      <button class="profile-trigger" id="profileTrigger" aria-label="Open profile menu" aria-expanded="false"><span class="profile-icon">●</span></button>
-      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</header>
-
-<div class="menu-overlay" id="menuOverlay"></div>
-<aside class="side-menu" id="sideMenu" aria-hidden="true">
-  <div class="side-menu-inner">
-    <div class="menu-profile"><div class="menu-avatar">●</div><div class="menu-profile-copy"><span>PROFILE</span><strong id="menuUserName">GUEST</strong></div></div>
-    <div class="menu-auth" id="menuAuth"><a class="menu-btn menu-login" href="login.html">LOGIN</a><a class="menu-btn menu-signup" href="signup.html">SIGN UP</a></div>
-    <div class="menu-team" id="menuTeam" hidden><a class="menu-btn menu-team-btn" href="team-details.html">TEAM DETAILS <span>→</span></a></div>
-    <div class="menu-title">MENU</div>
-    <nav class="menu-links"><a href="index.html">HOME</a><a href="tournaments.html">TOURNAMENTS</a><a href="leaderboard.html">LEADERBOARD</a><a href="teams.html">TEAMS</a><a href="work-with-us.html">PARTNERS / WORK WITH US</a><a href="esports-connect.html">ESPORTS CONNECT</a><a href="about.html">ABOUT US</a></nav>
-    <button class="logout-btn" id="logoutBtn" hidden>LOG OUT</button>
-  </div>
-</aside>
-
-<main class="dashboard-shell homepage-tournament-dashboard">
-  <section class="home-hero tournament-showcase" aria-label="Ongoing tournaments">
-    <div class="showcase-track" id="ongoingTournamentTrack">
-      <article class="showcase-slide is-active" data-slide="0">
-        <img class="showcase-background" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2200&q=88" alt="">
-        <div class="showcase-overlay"></div>
-        <div class="showcase-copy">
-          <span class="showcase-kicker"><i></i> ONGOING TOURNAMENT</span>
-          <h1>BGMI INDIAN<br><em>CHAMPIONSHIP</em> <span class="showcase-year">2025</span></h1>
-          <div class="showcase-meta"><span>🎮 BGMI</span><span>♙ Squad (4)</span><span>🏆 ₹50,00,000 Prize Pool</span></div>
-          <div class="showcase-date">▣ &nbsp; Oct 20, 2025 – Nov 02, 2025</div>
-          <a class="primary-action" href="tournament-2.html">View Details <b>→</b></a>
-        </div>
-        <div class="showcase-game-label">BATTLEGROUNDS<br><strong>MOBILE INDIA</strong><em>BIGGER. BOLDER. INDIAN.</em></div>
-      </article>
-      <article class="showcase-slide" data-slide="1">
-        <img class="showcase-background" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=2200&q=88" alt="">
-        <div class="showcase-overlay"></div>
-        <div class="showcase-copy">
-          <span class="showcase-kicker"><i></i> FEATURED TOURNAMENT</span>
-          <h1>FREE FIRE<br><em>INDIA CUP</em></h1>
-          <div class="showcase-meta"><span>◈ Free Fire</span><span>♟ Squad (4)</span><span>🏆 ₹10,00,000 Prize Pool</span></div>
-          <p>Discover tournament information and follow the competitive community.</p>
-          <a class="primary-action" href="tournament-3.html">View Details <b>→</b></a>
-        </div>
-        <div class="showcase-game-label">FREE FIRE<br><strong>INDIA CUP</strong></div>
-      </article>
-      <article class="showcase-slide" data-slide="2">
-        <img class="showcase-background" src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=2200&q=88" alt="">
-        <div class="showcase-overlay"></div>
-        <div class="showcase-copy">
-          <span class="showcase-kicker"><i></i> FEATURED TOURNAMENT</span>
-          <h1>CALL OF DUTY<br><em>MOBILE</em></h1>
-          <div class="showcase-meta"><span>◈ CODM</span><span>♟ Squad (4)</span><span>🏆 ₹12,00,000 Prize Pool</span></div>
-          <p>Explore the event and stay connected with Manifest Esports.</p>
-          <a class="primary-action" href="tournament-4.html">View Details <b>→</b></a>
-        </div>
-        <div class="showcase-game-label">CALL OF DUTY<br><strong>MOBILE</strong></div>
-      </article>
-    </div>
-    <button class="showcase-arrow showcase-prev" id="showcasePrev" type="button" aria-label="Previous tournament">‹</button>
-    <button class="showcase-arrow showcase-next" id="showcaseNext" type="button" aria-label="Next tournament">›</button>
-    <div class="showcase-pagination" id="showcasePagination" aria-label="Choose featured tournament"><button class="active" data-go="0" aria-label="Tournament 1"></button><button data-go="1" aria-label="Tournament 2"></button><button data-go="2" aria-label="Tournament 3"></button></div>
-  </section>
-
-  <section class="home-tournament-section past-tournaments-section" aria-labelledby="pastTournamentsTitle">
-    <div class="home-section-heading">
-      <div class="home-heading-with-icon"><span class="section-heading-icon">◷</span><div><h2 id="pastTournamentsTitle">PAST <em>TOURNAMENTS</em></h2><p>Relive the action. Check out our previous tournaments and champions.</p></div></div>
-      <a class="outline-link" href="tournaments.html">View All Past Tournaments <b>→</b></a>
-    </div>
-    <div class="past-tournament-grid">
-      <a class="past-tournament-card" href="tournament-1.html"><img src="assets/images/poster-bmps.svg" alt="BGMI tournament artwork"><span class="past-status">PAST EVENT</span><strong>BGMI Series</strong><small>BGMI · Tournament archive</small><b class="past-prize">🏆 ₹25,00,000 <span>↗</span></b></a>
-      <a class="past-tournament-card" href="tournament-3.html"><img src="assets/images/poster-valorant.svg" alt="Valorant Challengers tournament artwork"><span class="past-status">COMPLETED</span><strong>Valorant Challengers 2025</strong><small>♟ &nbsp; Jul 10, 2025 – Jul 28, 2025</small><b class="past-prize">🏆 ₹15,00,000 <span>↗</span></b></a>
-      <a class="past-tournament-card" href="tournament-3.html"><img src="assets/images/poster-freefire.svg" alt="Free Fire tournament artwork"><span class="past-status">COMPLETED</span><strong>Free Fire India Cup 2025</strong><small>♟ &nbsp; Jun 05, 2025 – Jun 22, 2025</small><b class="past-prize">🏆 ₹10,00,000 <span>↗</span></b></a>
-      <a class="past-tournament-card" href="tournament-4.html"><img src="assets/images/poster-codm.svg" alt="Call of Duty Mobile tournament artwork"><span class="past-status">COMPLETED</span><strong>CODM India Championship</strong><small>♟ &nbsp; Aug 05, 2024 – Aug 21, 2024</small><b class="past-prize">🏆 ₹12,00,000 <span>↗</span></b></a>
-      <a class="past-tournament-card" href="tournament-2.html"><img src="assets/images/poster-bgmi.svg" alt="BGMI championship artwork"><span class="past-status">PAST EVENT</span><strong>BMPS Championship</strong><small>BGMI · Tournament archive</small><b class="past-prize">🏆 ₹50,00,000 <span>↗</span></b></a>
-    </div>
-  </section>
-
-  <section class="home-tournament-section registered-section" aria-labelledby="registeredTournamentsTitle">
-    <div class="home-section-heading">
-      <div><span class="home-section-kicker">PLAYER DASHBOARD</span><h2 id="registeredTournamentsTitle">YOUR <em>REGISTERED TOURNAMENTS</em></h2><p>Tournaments you have joined. Track your progress, matches and results.</p></div>
-      <a class="outline-link" href="tournaments.html">View All Registered <b>→</b></a>
-    </div>
-    <div class="registered-tournament-list" id="registeredTournamentList">
-      <div class="registered-empty-state"><span class="registered-empty-icon">♟</span><div><strong>Your next tournament starts here</strong><p>Sign in and register for a tournament to see your event status, dates, and details in this section.</p></div><a class="primary-action compact-action" href="tournaments.html">Explore Tournaments <b>→</b></a></div>
-    </div>
-  </section>
+<body>
+<div class="ticker"><span></span> INDIAN ESPORTS, BIG ENERGY <b>/</b> PLAY. COMPETE. GROW.</div>
+<header class="header"><a class="brand" href="#home"><strong>M<span>•</span></strong><b>MANIFEST<small>ESPORTS</small></b></a>
+<button class="menu" aria-label="Toggle menu">☰</button><nav><a class="active" href="#home">HOME</a><a href="#tournaments">TOURNAMENTS</a><a href="#teams">TEAMS</a><a href="#news">NEWS</a><a href="#videos">VIDEOS</a><a href="#about">ABOUT</a></nav>
+<div class="social"><a href="#videos">▶</a><a href="#community">◎</a><a href="#community">𝕏</a><button id="search-toggle" aria-label="Search">⌕</button></div></header>
+<div class="search" hidden><input id="search-input" placeholder="Search tournaments, teams, news…"><button id="search-button">SEARCH ↗</button><p id="search-result"></p></div>
+<main>
+<section class="hero" id="home"><div class="hero-bg"></div><div class="shade"></div><button class="arrow prev" aria-label="Previous slide">‹</button><div class="hero-copy"><p class="eyebrow" id="eyebrow">MANIFEST ESPORTS PRESENTS</p><h1 id="hero-title">THE NEXT<br><em>LEVEL</em></h1><p class="hero-sub" id="hero-sub">BIGGER PLAYS. BOLDER DREAMS.</p><a class="button" id="hero-cta" href="#tournaments">EXPLORE TOURNAMENTS <b>↗</b></a><p class="hero-meta">● <span id="hero-meta">BUILT FOR THE COMPETITIVE SPIRIT</span></p></div><button class="arrow next" aria-label="Next slide">›</button><div class="dots"><button class="selected" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button></div></section>
+<section class="section" id="tournaments"><div class="heading"><h2>UPCOMING TOURNAMENTS</h2><a href="#tournaments" data-page="tournaments">VIEW ALL →</a></div><div class="tournament-grid" id="tournament-grid"></div></section>
+<div class="split"><section class="section" id="news"><div class="heading"><h2>LATEST NEWS</h2><a href="#news" data-page="news">VIEW ALL →</a></div><div class="news-grid" id="news-grid"></div></section>
+<section class="section" id="teams"><div class="heading"><h2>FEATURED TEAMS</h2><a href="#teams" data-page="teams">VIEW ALL →</a></div><div class="team-row"><button class="round" id="team-prev" aria-label="Previous teams">‹</button><div class="team-grid" id="team-grid"></div><button class="round" id="team-next" aria-label="Next teams">›</button></div><div class="team-dots">● <span>● ● ● ●</span></div></section></div>
+<section class="section" id="videos"><div class="heading"><h2>WATCH THE HIGHLIGHTS</h2><a href="#videos" data-page="videos">ALL VIDEOS →</a></div><div class="video-grid" id="video-grid"></div></section>
+<section class="join" id="community"><div><p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p><h2>READY TO <em>COMPETE?</em></h2><p>Follow the tournaments, teams, and stories shaping Indian esports.</p></div><a class="button" href="https://kraftonindiaesports.com/" target="_blank" rel="noopener noreferrer">JOIN THE COMMUNITY ↗</a></section>
+<section class="section about" id="about"><div><p class="eyebrow">WHO WE ARE</p><h2>PLAY WITH PURPOSE.<br><em>COMPETE WITH HEART.</em></h2><p>Manifest Esports is a fan-made esports experience celebrating the teams, tournaments, and stories that make competitive gaming exciting. This independent project is not affiliated with KRAFTON or any tournament organizer.</p><a href="#community">BE PART OF IT →</a></div><div class="stats"><div><b>01</b><span>ONE COMMUNITY</span></div><div><b>∞</b><span>ROOM TO LEVEL UP</span></div><div><b>100%</b><span>COMPETITIVE SPIRIT</span></div></div></section>
+<section class="page-content" id="page-content" hidden></section>
 </main>
-
-<footer class="home-footer reference-footer">
-  <div class="footer-brand-column"><a class="footer-brand" href="index.html"><img src="assets/images/manifest-logo.png" alt="Manifest Esports"></a><p>Play. Compete. Grow.</p><div class="footer-socials"><a href="https://youtube.com/@manifestesports-17" aria-label="YouTube">▶</a><a href="https://discord.gg/cngJnBwGNE" aria-label="Discord">◉</a><a href="https://www.instagram.com/manifestesports.in" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Community">♟</a></div></div>
-  <div class="footer-link-column"><strong>Quick Links</strong><a href="index.html">Home</a><a href="tournaments.html">Tournaments</a><a href="teams.html">Teams</a><a href="news.html">News</a><a href="about.html">About</a></div>
-  <div class="footer-link-column"><strong>Support</strong><a href="esports-connect.html">Help &amp; FAQ</a><a href="terms.html">Terms &amp; Conditions</a><a href="privacy-policy.html">Privacy Policy</a><a href="esports-connect.html">Contact Us</a></div>
-  <form class="footer-newsletter" onsubmit="event.preventDefault(); const m=this.querySelector('input'); if(m.checkValidity()){this.querySelector('button').textContent='✓';m.value='';}"><strong>Join Our Newsletter</strong><p>Get the latest updates, tournament alerts and esports news.</p><div><input type="email" aria-label="Your email" placeholder="Enter your email" required><button type="submit" aria-label="Subscribe">→</button></div></form>
-  <small>© 2025 Manifest Esports. All rights reserved.</small><b class="footer-tagline">INDIA PLAYS. WE BUILD.</b>
-</footer>
-<nav class="mobile-bottom-nav" aria-label="Mobile navigation"><a class="active" href="index.html"><b>⌂</b><span>Home</span></a><a href="tournaments.html"><b>♜</b><span>Tournaments</span></a><a href="leaderboard.html"><b>♧</b><span>Leaderboard</span></a><a href="teams.html"><b>♟</b><span>Teams</span></a><button type="button" id="mobileMore" aria-label="Open menu"><b>☰</b><span>More</span></button></nav>
-<script src="js/main.js"></script>
-<script>
-document.getElementById('mobileMore')?.addEventListener('click', () => document.getElementById('menuToggle')?.click());
-document.querySelector('.search-toggle')?.addEventListener('click', () => { window.location.href = 'tournaments.html'; });
-
-document.querySelector('.notification-toggle')?.addEventListener('click', () => { window.location.href = 'esports-connect.html'; });
-
-/* Homepage tournament carousel: navigation/menu markup and behavior are untouched. */
-(() => {
-  const slides = Array.from(document.querySelectorAll('.showcase-slide'));
-  const dots = Array.from(document.querySelectorAll('#showcasePagination button'));
-  const previous = document.getElementById('showcasePrev');
-  const next = document.getElementById('showcaseNext');
-  if (slides.length) {
-    let current = 0;
-    let timer;
-    const show = (index) => {
-      current = (index + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('is-active', i === current);
-        slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === current);
-        dot.setAttribute('aria-current', i === current ? 'true' : 'false');
-      });
-    };
-    const restart = () => {
-      window.clearInterval(timer);
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        timer = window.setInterval(() => show(current + 1), 6500);
-      }
-    };
-    previous?.addEventListener('click', () => { show(current - 1); restart(); });
-    next?.addEventListener('click', () => { show(current + 1); restart(); });
-    dots.forEach(dot => dot.addEventListener('click', () => {
-      show(Number(dot.dataset.go) || 0);
-      restart();
-    }));
-    const carousel = document.querySelector('.tournament-showcase');
-    carousel?.addEventListener('mouseenter', () => window.clearInterval(timer));
-    carousel?.addEventListener('mouseleave', restart);
-    show(0);
-    restart();
-  }
-
-  /* Render only registrations saved for the current demo user; never invent registrations. */
-  const list = document.getElementById('registeredTournamentList');
-  if (!list) return;
-  try {
-    const user = JSON.parse(localStorage.getItem('manifestEsportsUser') || 'null');
-    const allRegistrations = JSON.parse(localStorage.getItem('manifestRegisteredTournaments') || '[]');
-    const email = String(user?.email || '').toLowerCase();
-    const registrations = Array.isArray(allRegistrations)
-      ? allRegistrations.filter(item => item && email && String(item.email || '').toLowerCase() === email)
-      : [];
-    if (!registrations.length) return;
-    list.replaceChildren();
-    registrations.forEach(item => {
-      const row = document.createElement('article');
-      row.className = 'registered-event-row';
-      const image = document.createElement('img');
-      image.src = item.image || 'assets/images/poster-bgmi.svg';
-      image.alt = '';
-      const info = document.createElement('div');
-      info.className = 'registered-event-info';
-      const title = document.createElement('strong');
-      title.textContent = String(item.title || 'Registered Tournament');
-      const meta = document.createElement('div');
-      meta.className = 'registered-event-meta';
-      [item.game, item.format, item.prizePool, item.date].filter(Boolean).forEach(value => {
-        const span = document.createElement('span');
-        span.textContent = String(value);
-        meta.appendChild(span);
-      });
-      info.append(title, meta);
-      const action = document.createElement('div');
-      action.className = 'registered-event-action';
-      const status = document.createElement('span');
-      status.className = 'registered-event-status';
-      status.textContent = String(item.status || 'Registered');
-      const link = document.createElement('a');
-      link.className = 'outline-link';
-      link.href = item.href || 'tournaments.html';
-      link.textContent = 'View Details →';
-      action.append(status, link);
-      row.append(image, info, action);
-      list.appendChild(row);
-    });
-  } catch (error) {
-    /* Keep the friendly empty state if local browser data is invalid. */
-  }
-})();
-</script>
-</body>
-</html>
+<footer><a class="brand" href="#home"><strong>M<span>•</span></strong><b>MANIFEST<small>ESPORTS</small></b></a><p>PLAY <i>/</i> COMPETE <i>/</i> GROW</p><div><a href="#about">ABOUT</a><a href="#community">CONTACT</a><a href="#privacy" data-page="privacy">PRIVACY</a><a href="#terms" data-page="terms">TERMS</a></div><small class="copyright">© <span id="year"></span> MANIFEST ESPORTS. INDEPENDENT FAN PROJECT.</small></footer>
+<dialog id="modal"><button class="close" aria-label="Close">×</button><div id="modal-content"></div></dialog><div class="toast" id="toast"></div><script src="script.js"></script>
+</body></html>
