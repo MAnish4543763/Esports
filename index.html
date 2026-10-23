@@ -56,88 +56,73 @@
   </div>
 </aside>
 
-<main class="dashboard-shell">
-  <section class="home-hero" aria-label="Manifest Esports introduction">
-    <div class="home-hero-image" aria-hidden="true"></div>
-    <div class="home-hero-shade" aria-hidden="true"></div>
-    <div class="hero-brand-stamp" aria-hidden="true"><img src="assets/images/manifest-logo.png" alt=""><span>PLAY</span><span>COMPETE</span><span>GROW</span></div>
-    <div class="home-hero-copy">
-      <div class="home-eyebrow"><i></i> ESPORTS MANAGEMENT &amp; TOURNAMENT PLATFORM</div>
-      <h1>WE BUILD<br><em>LEGACIES.</em></h1>
-      <p>Manifest Esports is a next-gen platform for players, teams and organizers. We manage tournaments, build communities and create opportunities in the esports ecosystem.</p>
-      <div class="hero-actions"><a class="primary-action" href="tournaments.html">Explore Tournaments <b>→</b></a><a class="secondary-action" href="about.html">Learn More</a></div>
+<main class="dashboard-shell homepage-tournament-dashboard">
+  <section class="home-hero tournament-showcase" aria-label="Ongoing tournaments">
+    <div class="showcase-track" id="ongoingTournamentTrack">
+      <article class="showcase-slide is-active" data-slide="0">
+        <img class="showcase-background" src="assets/images/tournament-2.jpg" alt="">
+        <div class="showcase-overlay"></div>
+        <div class="showcase-copy">
+          <span class="showcase-kicker"><i></i> TOURNAMENT SPOTLIGHT</span>
+          <h1>BGMI INDIAN<br><em>CHAMPIONSHIP</em></h1>
+          <div class="showcase-meta"><span>◈ BGMI</span><span>♟ Squad (4)</span><span>🏆 ₹50,00,000 Prize Pool</span></div>
+          <p>Follow the action, explore event details, and get ready for your next competitive run.</p>
+          <a class="primary-action" href="tournament-2.html">View Details <b>→</b></a>
+        </div>
+        <div class="showcase-game-label">BATTLEGROUNDS<br><strong>MOBILE INDIA</strong></div>
+      </article>
+      <article class="showcase-slide" data-slide="1">
+        <img class="showcase-background" src="assets/images/tournament-3.jpg" alt="">
+        <div class="showcase-overlay"></div>
+        <div class="showcase-copy">
+          <span class="showcase-kicker"><i></i> FEATURED TOURNAMENT</span>
+          <h1>FREE FIRE<br><em>INDIA CUP</em></h1>
+          <div class="showcase-meta"><span>◈ Free Fire</span><span>♟ Squad (4)</span><span>🏆 ₹10,00,000 Prize Pool</span></div>
+          <p>Discover tournament information and follow the competitive community.</p>
+          <a class="primary-action" href="tournament-3.html">View Details <b>→</b></a>
+        </div>
+        <div class="showcase-game-label">FREE FIRE<br><strong>INDIA CUP</strong></div>
+      </article>
+      <article class="showcase-slide" data-slide="2">
+        <img class="showcase-background" src="assets/images/tournament-4.jpg" alt="">
+        <div class="showcase-overlay"></div>
+        <div class="showcase-copy">
+          <span class="showcase-kicker"><i></i> FEATURED TOURNAMENT</span>
+          <h1>CALL OF DUTY<br><em>MOBILE</em></h1>
+          <div class="showcase-meta"><span>◈ CODM</span><span>♟ Squad (4)</span><span>🏆 ₹12,00,000 Prize Pool</span></div>
+          <p>Explore the event and stay connected with Manifest Esports.</p>
+          <a class="primary-action" href="tournament-4.html">View Details <b>→</b></a>
+        </div>
+        <div class="showcase-game-label">CALL OF DUTY<br><strong>MOBILE</strong></div>
+      </article>
     </div>
-    <div class="hero-pagination"><span class="active"></span><span></span><span></span><b>01 / 03</b></div>
+    <button class="showcase-arrow showcase-prev" id="showcasePrev" type="button" aria-label="Previous tournament">‹</button>
+    <button class="showcase-arrow showcase-next" id="showcaseNext" type="button" aria-label="Next tournament">›</button>
+    <div class="showcase-pagination" id="showcasePagination" aria-label="Choose featured tournament"><button class="active" data-go="0" aria-label="Tournament 1"></button><button data-go="1" aria-label="Tournament 2"></button><button data-go="2" aria-label="Tournament 3"></button></div>
   </section>
 
-  <div class="dashboard-content">
-    <div class="dashboard-main-column">
-      <section class="feature-section" id="tournaments">
-        <div class="section-title-row"><div><span class="section-label"><i></i> FEATURED TOURNAMENT</span><h2>Featured Tournament</h2></div><a class="small-link" href="tournaments.html">View All Tournaments <b>→</b></a></div>
-        <article class="featured-event">
-          <a class="featured-art" href="tournament-2.html" aria-label="View BMPS 2026 tournament"><img src="assets/images/tournament-2.jpg" alt="BMPS 2026 Battlegrounds Mobile India tournament"></a>
-          <div class="featured-event-info">
-            <span class="live-pill"><i></i> FEATURED</span>
-            <h3>BMPS 2026</h3>
-            <div class="event-meta">
-              <div><span class="meta-icon">♜</span><span><small>Prize Pool</small><strong>₹ 50,00,000</strong></span></div>
-              <div><span class="meta-icon">◷</span><span><small>Start Date</small><strong>08 Jun 2026</strong></span></div>
-              <div><span class="meta-icon">▦</span><span><small>End Date</small><strong>21 Jun 2026</strong></span></div>
-            </div>
-            <div class="event-bottom"><span class="event-ended">Event concluded · June 2026</span><a class="primary-action compact-action" href="tournament-2.html">View Details <b>→</b></a></div>
-          </div>
-        </article>
-
-        <nav class="quick-links" aria-label="Explore Manifest">
-          <a class="quick-link" href="tournaments.html"><span class="quick-icon">♜</span><strong>Tournaments</strong><small>Compete in top-tier events<br>and win exciting rewards.</small></a>
-          <a class="quick-link" href="leaderboard.html"><span class="quick-icon">♟</span><strong>Leaderboard</strong><small>Track your rank and<br>performance.</small></a>
-          <a class="quick-link" href="teams.html"><span class="quick-icon">♧</span><strong>Teams</strong><small>Find or build your<br>dream team.</small></a>
-          <a class="quick-link" href="esports-connect.html"><span class="quick-icon">◎</span><strong>Esports Connect</strong><small>Connect, collaborate<br>and grow.</small></a>
-          <a class="quick-link" href="work-with-us.html"><span class="quick-icon">✥</span><strong>Partners</strong><small>Trusted brands powering<br>the esports ecosystem.</small></a>
-        </nav>
-
-        <section class="games-section">
-          <div class="section-title-row"><div><span class="section-label"><i></i> POPULAR GAMES</span><h2>Join Your Favorite Games</h2></div><a class="small-link" href="tournaments.html">View All Games <b>→</b></a></div>
-          <div class="game-grid">
-            <a class="game-card game-bg-one" href="tournaments.html"><img src="assets/images/tournament-2.jpg" alt=""><span>BGMI</span></a>
-            <a class="game-card game-bg-two" href="tournaments.html"><img src="assets/images/hero-bg.jpg" alt=""><span>Valorant</span></a>
-            <a class="game-card game-bg-three" href="tournaments.html"><img src="assets/images/tournament-3.jpg" alt=""><span>Free Fire</span></a>
-            <a class="game-card game-bg-four" href="tournaments.html"><img src="assets/images/tournament-4.jpg" alt=""><span>Call of Duty Mobile</span></a>
-            <a class="game-card game-bg-five" href="tournaments.html"><img src="assets/images/tournament-1.jpg" alt=""><span>CS2</span></a>
-            <a class="game-card game-bg-six" href="tournaments.html"><img src="assets/images/hero-bg.jpg" alt=""><span>Apex Legends</span></a>
-          </div>
-        </section>
-
-        <section class="partners-section">
-          <div class="section-title-row"><div><span class="section-label"><i></i> OUR PARTNERS</span><h2>Trusted by the Best</h2></div></div>
-          <p>We work with industry-leading brands to create better opportunities for players, teams and the esports community.</p>
-          <div class="partner-logos" aria-label="Partner brands"><span class="partner-bgmi">BGMI</span><span class="partner-redbull">Red Bull</span><span>logitech <b>G</b></span><span class="partner-monster">MONSTER<br>ENERGY</span><span>AMD</span><span class="partner-zowie">ZOWIE</span><span class="partner-steel">steelseries</span></div>
-        </section>
-      </section>
+  <section class="home-tournament-section past-tournaments-section" aria-labelledby="pastTournamentsTitle">
+    <div class="home-section-heading">
+      <div><span class="home-section-kicker">OUR JOURNEY</span><h2 id="pastTournamentsTitle">PAST <em>TOURNAMENTS</em></h2><p>Relive the action from previous competitions.</p></div>
+      <a class="outline-link" href="tournaments.html">View All <b>→</b></a>
     </div>
+    <div class="past-tournament-grid">
+      <a class="past-tournament-card" href="tournament-1.html"><img src="assets/images/tournament-1.jpg" alt="BGMI tournament artwork"><span class="past-status">PAST EVENT</span><strong>BGMI Series</strong><small>BGMI · Tournament archive</small><b class="past-prize">🏆 ₹25,00,000 <span>↗</span></b></a>
+      <a class="past-tournament-card" href="tournament-3.html"><img src="assets/images/tournament-3.jpg" alt="Free Fire tournament artwork"><span class="past-status">PAST EVENT</span><strong>Free Fire India Cup</strong><small>Free Fire · Tournament archive</small><b class="past-prize">🏆 ₹10,00,000 <span>↗</span></b></a>
+      <a class="past-tournament-card" href="tournament-4.html"><img src="assets/images/tournament-4.jpg" alt="Call of Duty Mobile tournament artwork"><span class="past-status">PAST EVENT</span><strong>CODM Championship</strong><small>CODM · Tournament archive</small><b class="past-prize">🏆 ₹12,00,000 <span>↗</span></b></a>
+      <a class="past-tournament-card" href="tournament-2.html"><img src="assets/images/tournament-2.jpg" alt="BGMI championship artwork"><span class="past-status">PAST EVENT</span><strong>BMPS Championship</strong><small>BGMI · Tournament archive</small><b class="past-prize">🏆 ₹50,00,000 <span>↗</span></b></a>
+    </div>
+  </section>
 
-    <aside class="dashboard-sidebar">
-      <section class="side-panel leaderboard-panel">
-        <div class="panel-heading"><h3><span class="panel-symbol">♛</span> Top Players</h3><a href="leaderboard.html">View Full Leaderboard →</a></div>
-        <ol class="player-list">
-          <li><span class="rank">1</span><span class="player-avatar avatar-gold">♛</span><span class="player-name">GodL Esports</span><strong>2840</strong></li>
-          <li><span class="rank">2</span><span class="player-avatar avatar-blue">♜</span><span class="player-name">Team Soul</span><strong>2610</strong></li>
-          <li><span class="rank">3</span><span class="player-avatar avatar-white">✥</span><span class="player-name">Xerox Esports</span><strong>2430</strong></li>
-          <li><span class="rank">4</span><span class="player-avatar avatar-red">◈</span><span class="player-name">OR Esports</span><strong>2210</strong></li>
-          <li><span class="rank">5</span><span class="player-avatar avatar-gold">♛</span><span class="player-name">GE</span><strong>1980</strong></li>
-        </ol>
-      </section>
-
-      <section class="side-panel news-panel">
-        <div class="panel-heading"><h3><span class="panel-symbol">▰</span> Latest News</h3><a href="about.html">View All →</a></div>
-        <a class="news-item" href="tournament-2.html"><img src="assets/images/tournament-1.jpg" alt=""><span><strong>BMPS 2026 Registration Now Open!</strong><small>Jun 2, 2026</small></span></a>
-        <a class="news-item" href="work-with-us.html"><img src="assets/images/tournament-3.jpg" alt=""><span><strong>New Partnership with Red Bull</strong><small>May 28, 2026</small></span></a>
-        <a class="news-item" href="esports-connect.html"><img src="assets/images/tournament-4.jpg" alt=""><span><strong>Manifest Esports Community Event</strong><small>May 20, 2026</small></span></a>
-      </section>
-
-      <a class="partner-cta" href="work-with-us.html"><span class="section-label"><i></i> PARTNER WITH US</span><strong>Become a Partner</strong><small>Let's build something great together. Partner with Manifest Esports and reach a global audience.</small><span class="primary-action compact-action">Partner With Us <b>→</b></span><img src="assets/images/hero-bg.jpg" alt=""></a>
-    </aside>
-  </div>
+  <section class="home-tournament-section registered-section" aria-labelledby="registeredTournamentsTitle">
+    <div class="home-section-heading">
+      <div><span class="home-section-kicker">PLAYER DASHBOARD</span><h2 id="registeredTournamentsTitle">YOUR <em>REGISTERED TOURNAMENTS</em></h2><p>Keep track of the competitions you have joined.</p></div>
+      <a class="outline-link" href="tournaments.html">Browse Events <b>→</b></a>
+    </div>
+    <div class="registered-tournament-list" id="registeredTournamentList">
+      <div class="registered-empty-state"><span class="registered-empty-icon">♟</span><div><strong>Your next tournament starts here</strong><p>Sign in and register for a tournament to see your event status, dates, and details in this section.</p></div><a class="primary-action compact-action" href="tournaments.html">Explore Tournaments <b>→</b></a></div>
+    </div>
+  </section>
 </main>
 
 <footer class="home-footer">
