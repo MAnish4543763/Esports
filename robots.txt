@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace this URL with the final custom-domain sitemap after DNS setup.
+Sitemap: https://manish4543763.github.io/Esports/sitemap.xml
