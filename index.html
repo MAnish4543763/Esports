@@ -136,7 +136,95 @@
 <script>
 document.getElementById('mobileMore')?.addEventListener('click', () => document.getElementById('menuToggle')?.click());
 document.querySelector('.search-toggle')?.addEventListener('click', () => { window.location.href = 'tournaments.html'; });
+
 document.querySelector('.notification-toggle')?.addEventListener('click', () => { window.location.href = 'esports-connect.html'; });
+
+/* Homepage tournament carousel: navigation/menu markup and behavior are untouched. */
+(() => {
+  const slides = Array.from(document.querySelectorAll('.showcase-slide'));
+  const dots = Array.from(document.querySelectorAll('#showcasePagination button'));
+  const previous = document.getElementById('showcasePrev');
+  const next = document.getElementById('showcaseNext');
+  if (slides.length) {
+    let current = 0;
+    let timer;
+    const show = (index) => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === current);
+        slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+        dot.setAttribute('aria-current', i === current ? 'true' : 'false');
+      });
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        timer = window.setInterval(() => show(current + 1), 6500);
+      }
+    };
+    previous?.addEventListener('click', () => { show(current - 1); restart(); });
+    next?.addEventListener('click', () => { show(current + 1); restart(); });
+    dots.forEach(dot => dot.addEventListener('click', () => {
+      show(Number(dot.dataset.go) || 0);
+      restart();
+    }));
+    const carousel = document.querySelector('.tournament-showcase');
+    carousel?.addEventListener('mouseenter', () => window.clearInterval(timer));
+    carousel?.addEventListener('mouseleave', restart);
+    show(0);
+    restart();
+  }
+
+  /* Render only registrations saved for the current demo user; never invent registrations. */
+  const list = document.getElementById('registeredTournamentList');
+  if (!list) return;
+  try {
+    const user = JSON.parse(localStorage.getItem('manifestEsportsUser') || 'null');
+    const allRegistrations = JSON.parse(localStorage.getItem('manifestRegisteredTournaments') || '[]');
+    const email = String(user?.email || '').toLowerCase();
+    const registrations = Array.isArray(allRegistrations)
+      ? allRegistrations.filter(item => item && email && String(item.email || '').toLowerCase() === email)
+      : [];
+    if (!registrations.length) return;
+    list.replaceChildren();
+    registrations.forEach(item => {
+      const row = document.createElement('article');
+      row.className = 'registered-event-row';
+      const image = document.createElement('img');
+      image.src = item.image || 'assets/images/tournament-2.jpg';
+      image.alt = '';
+      const info = document.createElement('div');
+      info.className = 'registered-event-info';
+      const title = document.createElement('strong');
+      title.textContent = String(item.title || 'Registered Tournament');
+      const meta = document.createElement('div');
+      meta.className = 'registered-event-meta';
+      [item.game, item.format, item.prizePool, item.date].filter(Boolean).forEach(value => {
+        const span = document.createElement('span');
+        span.textContent = String(value);
+        meta.appendChild(span);
+      });
+      info.append(title, meta);
+      const action = document.createElement('div');
+      action.className = 'registered-event-action';
+      const status = document.createElement('span');
+      status.className = 'registered-event-status';
+      status.textContent = String(item.status || 'Registered');
+      const link = document.createElement('a');
+      link.className = 'outline-link';
+      link.href = item.href || 'tournaments.html';
+      link.textContent = 'View Details →';
+      action.append(status, link);
+      row.append(image, info, action);
+      list.appendChild(row);
+    });
+  } catch (error) {
+    /* Keep the friendly empty state if local browser data is invalid. */
+  }
+})();
 </script>
 </body>
 </html>
