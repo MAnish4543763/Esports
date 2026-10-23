@@ -180,6 +180,8 @@ button,input{font:inherit}
 
 .menu-overlay{
     position:fixed;
+    width: 100%;    /* Increase horizontal size */
+  height: 100%;
     inset:0;
     z-index:2000;
     background:rgba(0,0,0,.72);
