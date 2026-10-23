@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080d13"/><stop offset=".45" stop-color="#383b35"/><stop offset=".7" stop-color="#d48a24"/><stop offset="1" stop-color="#10151a"/></linearGradient>
+ <radialGradient id="sun"><stop stop-color="#ffc247" stop-opacity=".95"/><stop offset="1" stop-color="#e47b10" stop-opacity="0"/></radialGradient>
+ <linearGradient id="armor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#444b50"/><stop offset=".35" stop-color="#141a20"/><stop offset=".65" stop-color="#30373a"/><stop offset="1" stop-color="#080b10"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a0"/><stop offset=".4" stop-color="#f4a71d"/><stop offset="1" stop-color="#6f3c0d"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="36"/></filter>
+ <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M3 20l15 -2M43 64l19 1M66 9l7 -1M22 44l6 1" stroke="#fff" stroke-opacity=".12" stroke-width="1"/></pattern>
+</defs>
+<rect width="1600" height="620" fill="url(#sky)"/>
+<circle cx="1030" cy="250" r="300" fill="url(#sun)" filter="url(#blur)"/>
+<path d="M0 470L130 350 220 405 340 290 420 400 560 300 680 400 810 270 900 405 1040 310 1170 420 1320 300 1450 400 1600 330V620H0Z" fill="#171c1d"/>
+<path d="M0 515L110 440 190 478 290 405 380 482 470 410 560 492 650 420 740 500 830 405 920 480 1020 420 1110 492 1210 400 1300 480 1400 415 1500 485 1600 440V620H0Z" fill="#0b1014"/>
+<g fill="#090e12" opacity=".9"><path d="M640 450h30v-92h20v-26h12v26h20v92h18v-55h28v55h20v-85h18v-22h10v22h18v85h28v-70h25v70h25v-50h20v50h30v-100h15v-25h12v25h20v100h25v-66h23v66h22v-42h28v42h26v-88h16v-22h11v22h18v88h26v-55h24v55h28v-105h17v-26h11v26h19v105h32v-62h26v62h27v-40h28v40h32v-85h18v-20h11v20h18v85h20v-50h28v50h24v-75h18v-18h11v18h18v75h20v-48h25v48h20v170H640Z"/></g>
+<g stroke="#e6a03c" stroke-width="3" opacity=".55" fill="none"><path d="M800 0L620 620M1040 0L870 620M1260 0L1130 620M1450 0L1350 620"/></g>
+<!-- armored battle-royale-inspired champion silhouette -->
+<g transform="translate(990 20)">
+ <path d="M150 120Q175 48 260 54Q342 57 365 137L350 210L315 246L183 235L145 193Z" fill="#080b10" stroke="#6b6a5c" stroke-width="7"/>
+ <path d="M163 127Q187 73 257 72Q322 76 346 131L325 158L183 160Z" fill="url(#armor)"/>
+ <path d="M166 130L338 132L326 160L182 164Z" fill="#080d13" stroke="#d59a31" stroke-width="5"/>
+ <path d="M190 165L325 163L309 184L204 188Z" fill="#0b1118"/>
+ <path d="M178 194L338 192L357 260L315 320L183 305L149 257Z" fill="url(#armor)" stroke="#6f6d5e" stroke-width="4"/>
+ <path d="M190 207L222 198L238 229L214 267L187 247Z" fill="#10161b" stroke="#c58a2d" stroke-width="3"/>
+ <path d="M291 201L323 214L315 252L288 267L273 232Z" fill="#0a1015" stroke="#bb8127" stroke-width="3"/>
+ <path d="M207 268L306 267L347 355L324 489L174 489L151 355Z" fill="#121a20" stroke="#555b5a" stroke-width="5"/>
+ <path d="M216 285L286 282L310 351L275 402L226 380L196 330Z" fill="url(#armor)" stroke="#c58c2b" stroke-width="4"/>
+ <path d="M184 310L126 350L90 465L125 480L199 378Z" fill="#11171d" stroke="#5e625e" stroke-width="5"/>
+ <path d="M322 308L385 352L425 458L390 480L305 379Z" fill="#11171d" stroke="#5e625e" stroke-width="5"/>
+ <path d="M143 454L189 461L190 620H106Z" fill="#080d12" stroke="#373c3e" stroke-width="4"/>
+ <path d="M310 454L356 451L395 620H308Z" fill="#080d12" stroke="#373c3e" stroke-width="4"/>
+ <path d="M105 467L130 467L124 525L98 518Z" fill="#d89a31" opacity=".7"/>
+ <path d="M385 466L409 457L427 507L402 517Z" fill="#d89a31" opacity=".7"/>
+</g>
+<!-- rifle silhouette -->
+<g transform="translate(1385 35) rotate(8)" fill="#090d11" stroke="#b37c27" stroke-width="3"><path d="M28 0h18v210h-18z"/><path d="M12 55h52v16H12z"/><path d="M22 95h32v14H22z"/><path d="M28 210h18v170H28z"/><path d="M5 360h62v16H5z"/></g>
+<rect width="1600" height="620" fill="url(#grain)" opacity=".35"/>
+<path d="M0 610H1600" stroke="#f7bb22" stroke-width="4" opacity=".9"/>
+</svg>
